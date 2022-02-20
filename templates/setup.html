@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Furime P2P Exchange | Setup</title>
+        <link rel="icon" type="image/x-icon" href="https://wallet.duinocoin.com/assets/furim_faucet.png">
+        <link rel="stylesheet" href="{{ url_for('static', filename='mystyles.css')}}">
+    </head>
+    <body>
+        <section class="section">
+            <div class="container">
+                <div class="columns">
+                    <div class="column">
+                        <p>
+                            <span class="icon">
+                                <img src="https://raw.githubusercontent.com/revoxhere/duino-coin/master/Resources/duco.png">
+                            </span>
+                            <span class="title has-text-weight-normal">Duino-Coin account</span>
+                            <p class="subtitle mb-0">
+                                Enter your DUCO credentials to link your profile with the exchange
+                            </p>
+                        </p>
+                        <br>
+                        <div class="columns is-mobile">
+                            <div class="column">
+                                <form action="/setup_duco">
+                                    <div class="field">
+                                        <div class="control">
+                                            <input class="input is-rounded" type="text" id="username_duco" name="username_duco" placeholder="Username">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="control">
+                                            <input class="input is-rounded" type="password" id="password_duco" name="password_duco" placeholder="Passphrase">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="control">
+                                            <button type="submit" class="button is-rounded is-fullwidth is-success">Save</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <p>
+                            <span class="icon">
+                                <img src="https://cryptologos.cc/logos/tron-trx-logo.png?v=018">
+                            </span>
+                            <span class="title has-text-weight-normal">Tron account</span>
+                            <p class="subtitle mb-0">
+                                Enter your TRX private key to link your wallet with the exchange
+                            </p>
+                        </p>
+                        <br>
+                        <div class="columns is-mobile">
+                            <div class="column">
+                                <form action="/setup_trx">
+                                    <div class="field">
+                                        <div class="control">
+                                            <input class="input is-rounded" type="password" type="text" id="trx_private_key" name="trx_private_key" placeholder="Tron private key">
+   
+                                                <p class="subtitle mb-0">Yes, i know that my TRX account should have 1 transaction.</p>
+                                                <input type="checkbox" required name="readed">
+
+                                         
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="control">
+                                            <button type="submit" class="button is-rounded is-fullwidth is-success">Save</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

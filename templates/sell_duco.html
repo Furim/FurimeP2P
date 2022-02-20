@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Furime P2P Exchange | Success</title>
+        <link rel="icon" type="image/x-icon" href="https://wallet.duinocoin.com/assets/furim_faucet.png">
+        <link rel="stylesheet" href="{{ url_for('static', filename='mystyles.css')}}">
+    </head>
+    <body>
+        <section class="section">
+            <div class="container has-text-centered">
+                <div class="columns has-text-left">
+                    <div class="column">
+                        <p class="title is-size-3">Sell DUCO for TRX</p>
+                        <p class="subtitle">Fill in the fields below to create a new sell offer</p>
+                    </div>
+                    <div class="column is-narrow">
+                        <div class="notification is-primary">⚠️ Use integer numbers (use of floating point numbers may cause problems)</div>
+                    </div>
+                </div>
+                <form action="/sell_duco_final">
+                    <div class="field">
+                        <div class="control">
+                            <input class="input is-danger is-rounded " type="number" step="any" id="duco" name="duco" placeholder="Amount of DUCO">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <input class="input is-danger is-rounded" step="any" type="number" id="trx" name="trx" placeholder="Price in TRX">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <button type="submit" class="button is-fullwidth is-danger is-rounded">Create a sell offer</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </body>
+    </html>

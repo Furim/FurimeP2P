@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Furime P2P Exchange | Home</title>
+        <link rel="icon" type="image/x-icon" href="https://wallet.duinocoin.com/assets/furim_faucet.png">
+        <link rel="stylesheet" href="{{ url_for('static', filename='mystyles.css')}}">
+        <script src='https://hcaptcha.com/1/api.js' async defer></script>
+        <script type="text/javascript">
+        var yourFunction = function () {
+        console.log('hCaptcha is ready.');
+        var widgetID = hcaptcha.render('h-captcha', { sitekey: '730d93e5-d1a8-464c-b264-9d17dc88a25a' });
+        };
+        </script>
+    </head>
+    <body>
+        <section class="hero is-small">
+            <div class="hero-body">
+                <section class="section">
+                    <div class="container">
+                        <p class="title">
+                            Furime P2P Exchange
+                        </p>
+                        <p class="subtitle">
+                            A decentralized Duino-Coin <-> TRX trading platform
+                        </p>
+                        <hr class="has-background-primary">
+                    </div>
+                </section>
+            </div>
+        </section>
+        <p class="heading is-size-4 has-text-centered mb-0">
+            Register or login to start.
+        </p>
+        <section class="section">
+            <div class="container">
+                <div class="columns is-vcentered">
+                    <div class="column">
+                        <div class="box has-background-black">
+                            <p class="heading is-size-4 has-text-centered">Create a new account</p>
+                            <form method="post" action="/register">
+                                <div class="field">
+                                    <div class="control">
+                                        <input class="input is-rounded" type="email" id="register_email" name="register_email" placeholder="E-mail address">
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="control">
+                                        <input class="input is-rounded" type="password" id="register_password" name="register_password" placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="field has-text-centered">
+                                    <div class="control">
+                                        {{ xcaptcha }}
+                                        <div class="h-captcha" data-sitekey="c20688f0-f7c7-4605-8510-37f07723bbba" data-theme="dark"></div>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="control">
+                                        <button class="button is-link is-rounded is-fullwidth" type="submit">
+                                        Register
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="columns is-multiline">
+                            <div class="column is-full">
+                                <div class="notification is-info">
+                                    ⚠️ The P2P exchange is currently in alpha state, I'm not responsible for any DUCO or TRX lost. Make sure to use an active TRX account (with at least 1 transaction)
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="box has-background-black">
+                                    <p class="heading is-size-4 has-text-centered">Use an existing account</p>
+                                    <form action="/user">
+                                        <div class="field">
+                                            <div class="control">
+                                                <input class="input is-rounded" type="email" id="email" name="email" placeholder="E-mail address">
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <div class="control">
+                                                <input class="input is-rounded" type="password" id="password" name="password" placeholder="Password">
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <div class="control">
+                                                <button class="button is-fullwidth is-primary is-rounded" type="submit">Login</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <br><br>
+                <hr class="has-background-primary">
+                <br>
+                <div class="has-text-centered m-5">
+                    <span class="icon-text">
+                        <span class="icon">
+                            <img src="https://wallet.duinocoin.com/assets/furim_faucet.png">
+                        </span>
+                        <span>2022 <b>Furime</b> Services</span>
+                    </span>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
