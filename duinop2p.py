@@ -349,7 +349,7 @@ def setup_trx():
       tron_dict =  (tron1.address.from_private_key(tron1.private_key))
       tronaddress = tron_dict['base58']
       ###trx addr generating from priv key
-      gfg = findread("remusmaluss@gmail.com", "database_crypto.txt")
+      gfg = findread(email_session_var, "database_crypto.txt")
       gfg_splitted = gfg.split(",")
 
       #      #email,duco_username,duco_password,trx_private_key,trx_addr
